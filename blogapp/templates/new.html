@@ -1,0 +1,14 @@
+<!-- 폼 띄우는 html -->
+
+<form action="{% url 'create' %}" method="POST">    <!-- POST: 처리해 줘! -->
+    {% csrf_token %}    <!-- 보안 위해 작성하는 코드 -->
+    <div>
+        <label for="title">제목</label><br>
+        <input type="text" name="title" id="title">
+    </div>
+    <div>
+        <label for="body">본문</label><br>
+        <textarea name="body" id="body" cols="30" rows="10"></textarea> <!-- cols: 칸, rows: 줄 -->
+    </div>
+    <input type="submit" value="글 생성하기">
+</form>
